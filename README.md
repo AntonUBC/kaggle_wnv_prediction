@@ -38,15 +38,13 @@ it was unclear how to implement it in the model. In the end, (as did many other 
 
 In this competition I constructed a three-level learning architecture to obtain predicted probabilities:
 
-- I used out-of-fold predictions of 9 different regression models to estimate log(number of mosquitoes) for each date-trap-species
-combination and added them as meta-features to the data, creating a stacked dataset
+- out-of-fold predictions of log(number of mosquitoes) from 9 different regression models were used to generate meta-features and add them to the data, creating a stacked dataset
 
-- I trained Gradient Boosting and Neural Network classifiers on stacked data to obtain two sets of second level predictions
+- Gradient Boosting and Neural Network classifiers were trained on stacked data to obtain two sets of predicted probabilities of WNV incidence
 
-- I combined predictions of second stage models using a geometric mean
+- predictions of second stage models were combined using a geometric mean
 
-I tuned hyper-parameters of 1st and 2d stage models using nice [hyperopt package] (https://github.com/hyperopt/hyperopt) 
-splitting training data by year for cross-validation.
+I tuned hyper-parameters of 1st and 2d stage models using a very nice package called [hyperopt] (https://github.com/hyperopt/hyperopt) splitting training data by year for cross-validation.
 
 Thanks to this competition, I discovered two great machine learning libraries: [XGBoost](https://github.com/dmlc/xgboost) and
 [Lasagne](https://github.com/Lasagne/Lasagne). The first one is a gradient boosting library with parallelized tree building

@@ -22,13 +22,9 @@ Moreover, WNV could be recorded as "present" in one duplicated row, and "absent"
 
 ### Feature Engineering
 
-As it turned out, duplicated rows could be used to substantially improve the accuracy of predictions since the number of duplicated rows
-introduced a "leakage" in data from which traps with large number of mosquitoes could be detected. Since duplicated rows
+As it turned out, duplicated rows could be used to substantially improve the accuracy of predictions since they introduced a "leakage" in data from which traps with large number of mosquitoes could be detected. Since duplicated rows
 were observed in both train and test data, one could easily generate a very useful 
-feature: number of duplicated rows for a particular date-trap-species combination. Furthermore, it was tempting to use the 
-number of mosquitoes directly in the model. To address the absence of this information in test data, I used the number of 
-mosquitoes per date-trap-species combination in train data to generate meta-features by constructing out-of-fold predictions
-for log(number of mosquitoes).
+feature: number of duplicated rows for a particular date-trap-species combination. Furthermore, given that train data contained the number of mosquitoes per trap, it was tempting to use it as a feature in the model. To address the absence of this information in test data, I used the number of mosquitoes per date-trap-species combination in train data to generate meta-features by constructing out-of-fold predictions for log(number of mosquitoes).
 In addition to these features, I used current and lagged weather conditions such as max and min temperature, [wet bulb](https://en.wikipedia.org/wiki/Wet-bulb_temperature),
 [dew point](https://en.wikipedia.org/wiki/Dew_point), and etc. The lags for each weather variable were chosen at 1, 3, 5, 8, and 12 days.
 I struggled trying to extract something useful from spraying data. Since it did not cover all training years (only 2011 and 2013),

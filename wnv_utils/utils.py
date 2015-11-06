@@ -144,7 +144,7 @@ def LoadTrain(version): # Load and prepare train data
 
 # Note: This is a POST-DEADLINE improvement 
 # This procedure calculates the number of duplicated rows by ['Date', 'Species'], ['Date', 'Trap'], ['Date', 'Block'],
-# ['Year', 'Species'], and etc. This improves LB score by about 0.008
+# ['Year', 'Species'], and etc. This improves LB score by about 0.017-0.018
 def AddMoreFeatures(df, list_cols):
     indicator = np.not_equal(df.N_Dupl.values, np.ones(df.shape[0]))
     df['N'] = indicator

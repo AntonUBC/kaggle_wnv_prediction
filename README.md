@@ -67,7 +67,7 @@ mode in the real life (something that I want to learn on Kaggle). Nevertheless, 
 I added a simple manual tuning procedure to my solution, multiplying 2012 probabilities by 3 (if the result was greater than one, I set it to 0.99).
 Applying this simple procedure to my model generates a huge increase in the LB score: 0.824-0.825 and 27th-28th position on the LB. Moreover, applying this tuning to a model with added multirow features produces a score around 0.834-0.835 and a very high 17th-18th position on the LB.
 
-Overall, this script can generate 4 types of output: baseline model with and without manual tuning of 2012 probabilities (the latter was used for submission), and post-deadline model with and without tuning. In addition, there is a possibility to bootstrap the Neural Net predictions, since they usually have high variance. Depending on the number of bootstrap samples, this can generate 0.005-0.008 improvement in the LB score, relatively simple adjustment which I did not adopt for my official submission due to lack of time.
+Overall, this script can generate 4 types of output: baseline model with and without manual tuning of 2012 probabilities (the latter was used for submission), and post-deadline model with and without tuning. In addition, there is a possibility to bootstrap the Neural Net predictions, since they usually have high variance. Depending on the number of bootstrap samples, this can generate 0.005-0.008 improvement in the LB score.
 
 ### Instruction
 

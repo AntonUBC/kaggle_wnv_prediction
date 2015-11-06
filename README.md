@@ -34,9 +34,18 @@ it was unclear how to implement it in the model. In the end, (as did many other 
 
 In this competition I constructed a three-level learning architecture to obtain predicted probabilities:
 
-- out-of-fold predictions of log(number of mosquitoes) from 9 different regression models were used to generate meta-features and add them to the data, creating a stacked dataset
-
-- Gradient Boosting and Neural Network classifiers were trained on stacked data to obtain two sets of predicted probabilities of WNV incidence
+- out-of-fold predictions of log(number of mosquitoes) from 9 different regression models were used to generate meta-features and add them to the data, creating a stacked dataset. I used the following models at this stage:
+  - Gtadient Boosting Trees (XGBoost)
+  - Random Forest (Sklearn)
+  - Extremely Randomized Trees (Sklearn)
+  - Gtadient Boosting Trees (Sklearn)
+  - AdaBoost with Regression Trees (Sklearn)
+  - Support vector regression (Sklearn)
+  - Linear Boosting (XGBoost)
+  - Ridge Regression (Sklearn)
+  - Lasso (Sklearn)
+- Gradient Tree Boosting and Neural Network classifiers were trained on stacked data to obtain two sets of predicted probabilities of WNV incidence. Neural Net classifier was implemented using a multilayer perceptron with three hidden
+layers and dropout for regularization.
 
 - predictions of second stage models were combined using a geometric mean
 

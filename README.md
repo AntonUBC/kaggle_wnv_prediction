@@ -61,9 +61,7 @@ I adopted for my solution.
 ### Post-deadline Improvements
 
 I really wish I went further with multirow feature engineering during competition and calculated
-the number of duplicated rows per species-year, trap-year, species-month, trap-month, and etc. Some of top competitors
-successfully adopted a similar approach getting very high scores on the LB.
-It turned out that adding these features to my model improves the LB score by about 0.017-0.18 and places somewhere between 50th and 60th positions on the LB. I implemented this modification in the script as "the post-deadline improvement".
+the number of duplicated rows per species-year, trap-year, species-month, trap-month, and etc. It turned out that adding these features to my model improves the LB score by about 0.017-0.18 and places somewhere between 50th and 60th positions on the LB. I implemented this modification in the script as "the post-deadline improvement".
 In addition, it could have been figured out from the competition forum that year 2012 in test data had a particularly large
 outbreak of WNV which was really hard to predict given the data (this could be inferred upon the Public LB feedback).
 Consequently, almost all top competitors used manual tuning of predicted probabilities to improve their LB score.

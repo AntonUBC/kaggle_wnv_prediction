@@ -3,8 +3,7 @@
 ### Project Description 
 
 Given [weather, location, and spraying data](https://www.kaggle.com/c/predict-west-nile-virus/data), this competition asked kagglers to predict when 
-and where different species of mosquitoes will test positive for West Nile virus. In other words, the prediction target
-was the probability of finding a WNV infected mosquito in a particular day, at a particular location, and in a particular type of mosquito.
+and where different species of mosquitoes will test positive for West Nile virus.
 The evaluation metric for prediction accuracy was [ROC AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 The data set included 8 years: 2007 to 2014. Years 2007, 2009, 2011 and 2013 were used for training while remaining four years
 were included in test data. This competition was particularly challenging for two reasons:
@@ -16,14 +15,13 @@ yearly patterns in WNV outbreaks)
 In addition, the data was organized in such a way that when the number of mosquitoes exceeded 50, they were split into
 another record (another row in the dataset), such that the number of mosquitoes in each row was capped at 50. This
 nature of data representation generated duplicate rows for each unique date, trap, species combination in the data.
-Moreover, WNV could be recorded as "present" in one duplicated row, and "absent" in another which introduced a substantial variation
-in the distribution of WNV even conditional on date, location and the type of mosquitoes in the trap.
+Moreover, WNV could be recorded as "present" in one duplicated row, and "absent" in another which introduced variation in the distribution of WNV even conditional on date, location and the type of mosquitoes in the trap.
 
 ### Feature Engineering
 
 As it turned out, duplicated rows could be used to substantially improve the accuracy of predictions since the number of duplicated rows
-introduced a "leakage" in data from which the rows with large number of mosquitoes could be detected. Since duplicated rows
-were observed in both train and test data, as opposed to the number of mosquitoes, one could easily generate a very useful 
+introduced a "leakage" in data from which traps with large number of mosquitoes could be detected. Since duplicated rows
+were observed in both train and test data, one could easily generate a very useful 
 feature: number of duplicated rows for a particular date-trap-species combination. Furthermore, it was tempting to use the 
 number of mosquitoes directly in the model. To address the absence of this information in test data, I used the number of 
 mosquitoes per date-trap-species combination in train data to generate meta-features by constructing out-of-fold predictions

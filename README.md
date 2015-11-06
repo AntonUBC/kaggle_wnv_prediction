@@ -86,8 +86,7 @@ into folder ```./data``` (you may need to adjusts its path according to your loc
 will be used for saving predictions.
 
 - run ```/kaggle_wnv_virus_prediction/ensemble/ensemble_submission.py``` to generate the file of predictions in csv format. You can submit obtained predictions [here](https://www.kaggle.com/c/predict-west-nile-virus/submissions/attach).
- Moreover, you can produce 4 different types of predictions with this script: 2 versions of data (baseline, baseline plus added features) times 2 submission versions
- (with and without manual adjustment of 2012 probabilities). In addition, you may choose to bootstrap Neural Net predictions
+ You can choose between 4 different submission types by combining any of the 2 data versions with 2 submission versions as was described earlier. In addition, one may choose to bootstrap Neural Net predictions
  setting ```bagging=True``` in the beginning of the script. Be careful to not set too large number of bootstrap repetitions providing your Theano is configured for GPU.
  
 ### Dependencies

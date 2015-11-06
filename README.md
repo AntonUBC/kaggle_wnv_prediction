@@ -4,7 +4,7 @@
 
 Given [weather, location, and spraying data](https://www.kaggle.com/c/predict-west-nile-virus/data), this competition asked kagglers to predict when 
 and where different species of mosquitoes will test positive for West Nile virus. In other words, the prediction target
-was the probability of finding a WNV infected mosquito in a particular day, particular location, and in a particular type of mosquito.
+was the probability of finding a WNV infected mosquito in a particular day, at a particular location, and in a particular type of mosquito.
 The evaluation metric for prediction accuracy was [ROC AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 The data set included 8 years: 2007 to 2014. Years 2007, 2009, 2011 and 2013 were used for training while remaining four years
 were included in test data. This competition was particularly challenging for two reasons:

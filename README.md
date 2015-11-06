@@ -40,7 +40,7 @@ In this competition I constructed a three-level learning architecture to obtain 
   - Extremely Randomized Trees (Sklearn)
   - Gtadient Boosting Trees (Sklearn)
   - AdaBoost with Regression Trees (Sklearn)
-  - Support vector regression (Sklearn)
+  - Support Vector Regression (Sklearn)
   - Linear Boosting (XGBoost)
   - Ridge Regression (Sklearn)
   - Lasso (Sklearn)

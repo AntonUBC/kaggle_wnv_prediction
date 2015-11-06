@@ -4,7 +4,7 @@
 
 # Description:
 
-# 1. XGBoostRegressor (used in stacking procedure): gradient boosing model with least squares objective. 
+# 1. XGBoostRegressor (used in stacking procedure): gradient boosting model with least squares objective. 
 #    It can be trained with either tree or linear booster
 
 # The following two models were used in the second stage to obtain probabilities:

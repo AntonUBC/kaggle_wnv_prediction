@@ -151,7 +151,7 @@ def AddMoreFeatures(df, list_cols):
     grouped = df.groupby(by=list_cols, as_index=False)['N'].sum() 
     grouped.columns = [list_cols[0], list_cols[1], 'N_Dupl_%s_%s' %(list_cols[0], list_cols[1])]
     df.drop('N', axis=1, inplace=True)
-    result = df.merge(grouped, on=list_cols, how="left") #.reset_index()    
+    result = df.merge(grouped, on=list_cols, how="left")   
     return result 
 
 def save_submission(path_sample_submission, ids, predictions):

@@ -35,10 +35,10 @@ it was unclear how to implement it in the model. In the end, (as did many other 
 In this competition I constructed a three-level learning architecture to obtain predicted probabilities:
 
 - out-of-fold predictions of log(number of mosquitoes) from 9 different regression models were used to generate meta-features and add them to the data, creating a stacked dataset. I used the following models at this stage:
-  - Gtadient Boosting Trees (XGBoost)
+  - Gradient Boosting Trees (XGBoost)
   - Random Forest (Sklearn)
   - Extremely Randomized Trees (Sklearn)
-  - Gtadient Boosting Trees (Sklearn)
+  - Gradient Boosting Trees (Sklearn)
   - AdaBoost with Regression Trees (Sklearn)
   - Support Vector Regression (Sklearn)
   - Linear Boosting (XGBoost)

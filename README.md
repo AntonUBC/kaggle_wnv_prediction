@@ -44,7 +44,7 @@ In this competition I constructed a three-level learning architecture to obtain 
   - Linear Boosting (XGBoost)
   - Ridge Regression (Sklearn)
   - Lasso (Sklearn)
-- Gradient Tree Boosting and Neural Network classifiers were trained on stacked data to obtain two sets of predicted probabilities of WNV incidence. Neural Net classifier was implemented using a multilayer perceptron with three hidden
+- Gradient Tree Boosting (XGBoost) and Neural Network (Lasagne) classifiers were trained on stacked data to obtain two sets of predicted probabilities of WNV incidence. Neural Net classifier was implemented using a multilayer perceptron with three hidden
 layers and dropout for regularization.
 
 - predictions of second stage models were combined using a geometric mean

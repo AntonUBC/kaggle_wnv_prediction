@@ -44,7 +44,7 @@ In this competition I constructed a three-level learning architecture to obtain 
 
 - predictions of second stage models were combined using a geometric mean
 
-I tuned hyper-parameters of 1st and 2d stage models using a very nice package called [hyperopt] (https://github.com/hyperopt/hyperopt) splitting training data by year for cross-validation.
+I tuned hyper-parameters of 1st and 2d stage models using a very nice package called [hyperopt] (https://github.com/hyperopt/hyperopt) and splitting data by year for cross-validation.
 
 Thanks to this competition, I discovered two great machine learning libraries: [XGBoost](https://github.com/dmlc/xgboost) and
 [Lasagne](https://github.com/Lasagne/Lasagne). The first one is a gradient boosting library with parallelized tree building

@@ -63,24 +63,20 @@ I adopted in my solution.
 
 I really wish I went further with multirow feature engineering during competition and calculated
 the number of duplicated rows per species-year, trap-year, species-month, trap-month, and etc. Some of top competitors
-successfully adopted similar approach getting top positions on the LB.
-It turned out that adding these features to my model improves the LB score by about 0.01 and gives a position  on the LB
-somewhere between 50th and 60th places. I implemented this modification in the script as "the post-deadline improvement".
+successfully adopted a similar approach getting very high scores on the LB.
+It turned out that adding these features to my model improves the LB score by about 0.017-0.18 and places somewhere between 50th and 60th positions on the LB. I implemented this modification in the script as "the post-deadline improvement".
 In addition, it could have been figured out from the competition forum that year 2012 in test data had a particularly large
 outbreak of WNV which was really hard to predict given the data (this could be inferred upon the Public LB feedback).
 Consequently, almost all top competitors used manual tuning of predicted probabilities to improve their LB score.
-I did not implement this approach in my submission (rookie mistake not reading the competition forum). In addition, I think
+I did not implement this approach in my submission (rookie mistake not reading the competition forum). Moreover, I think
 that manual tuning upon the LB feedback, while suitable for Kaggle competition, cannot be used to produce a good predictive
 mode in the real life (something that I want to learn on Kaggle). Nevertheless, shortly after competition had ended,
-I implemented a simple manual tuning to my solution, where all 2012 probabilities were multiplied by 3 (if the result was greater than one, I set it to 0.99).
-Applying this simple procedure to my model generates a huge increase in the LB score giving something around 0.824-0.825 and 27th-28th position
-on the LB. Moreover, applying manual tuning to a model with added multirow features gives a score 0.834-0.835 and a very high 17th-18th position
-on the LB.
+I added a simple manual tuning procedure to my solution, multiplying 2012 probabilities by 3 (if the result was greater than one, I set it to 0.99).
+Applying this simple procedure to my model generates a huge increase in the LB score giving something around 0.824-0.825 and 27th-28th position on the LB. Moreover, applying this tuning to a model with added multirow features produces a score around 0.834-0.835 and a very high 17th-18th position on the LB.
 
 Consequently, my script can generate 4 types of output: baseline model with and without manual tuning of 2012 probabilities (the latter was used for submission),
-post-deadline model with and without tuning. In addition, there is a possibility to bootstrap the Neural Net predictions, since in general they have high variance.
-Depending on the number of bootstrap samples, this produces 0.005-0.008 improvement in the LB score, relatively simple improvement which I did not
-adopt in my official submission due to lack of time.
+post-deadline model with and without tuning. In addition, there is a possibility to bootstrap the Neural Net predictions, since they usually have high variance.
+Depending on the number of bootstrap samples, this produces 0.005-0.008 improvement in the LB score, relatively simple improvement which I did not adopt in my official submission due to lack of time.
 
 ### Instruction
 

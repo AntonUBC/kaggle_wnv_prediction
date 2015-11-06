@@ -77,7 +77,7 @@ Applying this simple procedure to my model generates a huge increase in the LB s
 
 Consequently, my script can generate 4 types of output: baseline model with and without manual tuning of 2012 probabilities (the latter was used for submission),
 post-deadline model with and without tuning. In addition, there is a possibility to bootstrap the Neural Net predictions, since they usually have high variance.
-Depending on the number of bootstrap samples, this produces 0.005-0.008 improvement in the LB score, relatively simple improvement which I did not adopt in my official submission due to lack of time.
+Depending on the number of bootstrap samples, this can generate 0.005-0.008 improvement in the LB score, relatively simple improvement which I did not adopt in my official submission due to lack of time.
 
 ### Instruction
 

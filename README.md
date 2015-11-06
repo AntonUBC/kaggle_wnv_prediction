@@ -55,7 +55,7 @@ Lasagne is a great deep learning library which is built on top of [Theano](https
 can be configured for [GPU](http://deeplearning.net/software/theano/tutorial/using_gpu.html) which gives a considerable gain
 in speed (this is especially useful since Neural Net predictions must often be aggregated with a bootstrap procedure to reduce their
 variability). I want to thank [Adam Harasimowicz](https://www.kaggle.com/aharasim) whose [implementation of Lasagne](https://github.com/ahara/kaggle_otto)
-I adopted in my solution.
+I adopted for my solution.
 
 ### Post-deadline Improvements
 

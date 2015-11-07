@@ -56,7 +56,7 @@ Thanks to this competition, I discovered two great machine learning libraries: [
 and numerous regularization capabilities (it also includes a linear booster). In my experience, it outperforms sklearn
 [Gradient Boosting Trees] (http://scikit-learn.org/stable/modules/ensemble.html#gradient-tree-boosting) in every single
 dimension including speed and accuracy. I think that literally EVERY ONE of recent Kaggle winners used this library alone or
-in ensemble with other models.
+in ensemble with some other models.
 Lasagne is a great deep learning library which is built on top of [Theano](https://github.com/Theano/Theano) and therefore
 can be configured for [GPU](http://deeplearning.net/software/theano/tutorial/using_gpu.html) which gives a considerable gain
 in speed (this is especially useful since Neural Net predictions must often be aggregated with a bootstrap procedure to reduce their

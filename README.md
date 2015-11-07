@@ -17,7 +17,7 @@ yearly patterns in WNV outbreaks)
 
 In addition, the data was organized in such a way that when the number of mosquitoes exceeded 50, they were split into
 another record (another row in the dataset), such that the number of mosquitoes in each row was capped at 50. This
-nature of data representation generated duplicate rows for each unique date, trap, species combination in the data.
+nature of data representation generated duplicate rows for some date, trap, species combination in the data.
 Moreover, WNV could be recorded as "present" in one duplicated row, and "absent" in another which introduced variation in the distribution of WNV even conditional on date, location and the type of mosquitoes in the trap.
 
 ### Feature Engineering

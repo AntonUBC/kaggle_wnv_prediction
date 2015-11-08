@@ -33,7 +33,7 @@ from wrappers import models
 
 Data_Version = 1 # 2    Choose the data version (1,2)
 Submission_Version = 1 # 2  Choose the submission version (1,2)
-bagging = False # True  Bagging stabilizes Neural Net predictions which have high variance in general
+bagging = False # True  Bagging stabilizes Neural Net predictions which usually have high variance
 if bagging == True:
     number_samples = 250  # set number of bootstrap samples (set high number only if you have GPU, otherwise
                           # use 10 or 20 samples)

@@ -52,11 +52,9 @@ layers and dropout for regularization.
 I tuned hyper-parameters of 1st and 2d stage models using a very nice package called [hyperopt] (https://github.com/hyperopt/hyperopt) and splitting data by year for cross-validation.
 
 Thanks to this competition, I discovered two great machine learning libraries: [XGBoost](https://github.com/dmlc/xgboost) and
-[Lasagne](https://github.com/Lasagne/Lasagne). The first one is a gradient boosting library with parallelized tree building
-and numerous regularization capabilities (it also includes a linear booster). In my experience, it outperforms sklearn
+[Lasagne](https://github.com/Lasagne/Lasagne). The first one is an open source gradient boosting library written in C++ which supports parallelized tree building and has numerous regularization capabilities. In my experience, it outperforms sklearn
 [Gradient Boosting Trees] (http://scikit-learn.org/stable/modules/ensemble.html#gradient-tree-boosting) in every single
-dimension including speed and accuracy. I think that literally EVERY ONE of recent Kaggle winners used this library alone or
-in ensemble with some other models.
+dimension including speed and accuracy. I think that literally EVERY ONE of recent Kaggle winners used this library either alone or in ensemble with some other models.
 Lasagne is a great deep learning library which is built on top of [Theano](https://github.com/Theano/Theano) and therefore
 can be configured for [GPU](http://deeplearning.net/software/theano/tutorial/using_gpu.html) which gives a considerable gain
 in speed (this is especially useful since Neural Net predictions must often be aggregated with a bootstrap procedure to reduce their

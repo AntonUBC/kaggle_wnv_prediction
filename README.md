@@ -28,7 +28,7 @@ feature: number of duplicated rows for a particular date-trap-species combinatio
 In addition to these features, I used current and lagged weather conditions such as max and min temperature, [wet bulb](https://en.wikipedia.org/wiki/Wet-bulb_temperature),
 [dew point](https://en.wikipedia.org/wiki/Dew_point), and etc. The lags for each weather variable were chosen at 1, 3, 5, 8, and 12 days.
 I struggled trying to extract something useful from spraying data. Since it did not cover all training years (only 2011 and 2013),
-it was unclear how to implement it in the model. In the end, (as did many other kagglers) I ended up not using it at all.
+it was unclear how to implement it in the model. In the end, (as did many other competitors) I ended up not using it at all.
 
 ### Model Description
 

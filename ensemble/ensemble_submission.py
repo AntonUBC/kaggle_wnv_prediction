@@ -73,7 +73,7 @@ train.drop(['NumMosquitos', 'WnvPresent'], axis=1, inplace=True)
 ids=test.Id.values    # use ids to construct the submission file
 test.drop('Id', axis=1, inplace=True)
 
-# Initialize regression models for estimation of log(predicted number of mosquitos)
+# Initialize regression models for estimation of log(number of mosquitos)
 
 clf1 = models.XGBoostRegressor(booster='gbtree', nthread=6, eta=.025, gamma=1.9, max_depth=9, 
                  min_child_weight=6, max_delta_step=0, subsample=0.75, colsample_bytree=0.7, 

@@ -38,8 +38,6 @@ if bagging == True:
     number_samples = 250  # set number of bootstrap samples (set high number only if you have GPU, otherwise
                           # use 10 or 20 samples)
 
-path_sample_submission = paths.DATA_SUBMISSION_PATH
-      
 def PredictXGB(train, test, target):  # Get predictions of XGBoost classifier
     print("Training Gradient Boosting Classifier ")
     clf = models.XGBoostClassifier(nthread=6, eta=0.025, gamma=1.425, max_depth=11,

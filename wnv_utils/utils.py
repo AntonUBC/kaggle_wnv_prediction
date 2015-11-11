@@ -154,7 +154,7 @@ def AddMoreFeatures(df, list_cols):
     result = df.merge(grouped, on=list_cols, how="left")   
     return result 
 
-def save_submission(path_sample_submission, ids, predictions):
+def save_submission(ids, predictions):
     submission = pd.DataFrame({"Id": ids, "WnvPresent": predictions})
     submission.to_csv(path_sample_submission, index=False) 
 

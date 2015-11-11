@@ -131,4 +131,4 @@ else:
    preds=(preds_nn**(0.6))*(preds_xgb**(0.4))
 
 #Save the submission file   
-utils.save_submission(path_sample_submission, ids, preds)
+utils.save_submission(ids, preds)

@@ -1,7 +1,7 @@
 ## My solution to [Kaggle West Nile virus prediction challenge] (https://www.kaggle.com/c/predict-west-nile-virus)
 
 The unbagged version of this solution produced the ROC AUC score 0.79519 on the private LB which put me on the
-114th position among 1306 participants. However, the variance of generated predictions was very high since I used a Neural Net in my ensemble. Cosequently, experimenting after deadline, I figured out that exactly the same model could give me the score around 0.806-0.807 and 78th-79th position on the LB. When I used bagging to stabilize NN predictions, the score became more uniform: 0.803-0.804 and 89th-90th position on the LB with 200-250 bootstrap rounds. 
+114th position among 1306 participants. However, the variance of generated predictions was very high since I used a Neural Net model in my ensemble. Cosequently, experimenting after deadline, I figured out that exactly the same model could give me the score around 0.806-0.807 and 78th-79th position on the LB. When I used bagging to stabilize NN predictions, the score became more uniform: 0.803-0.804 and 89th-90th position on the LB with 200-250 bootstrap rounds. 
 
 ### Project Description 
 

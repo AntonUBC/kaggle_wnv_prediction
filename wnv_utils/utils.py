@@ -161,7 +161,7 @@ def save_submission(ids, predictions):
 def StackModels(train, test, y, clfs, n): # train data (pd data frame), test data (pd date frame), Target data, List of clfs to stack, position of last non-scailed model in clfs. 
 
 # StackModels() performs Stacked Aggregation on data: it uses 9 different models to get out-of-fold 
-# predictions for log(number of mosquitos) for train data. It uses the whole train dataset to obtain 
+# predictions of log(number of mosquitos) for train data. It uses the whole train dataset to obtain 
 # predictions for test. This procedure adds 9 meta-features (predictions of 9 models) to both train and 
 # test data. Furthermore, since some models (e.g., SVR) require data to be scailed for better performance,
 # there is a parameter to be passed to StackModels() which determines the position of the LAST non-scailed

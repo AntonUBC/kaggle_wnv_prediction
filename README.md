@@ -90,5 +90,5 @@ will be used for saving predictions.
 - Numpy (any relatively recent version would work)
 - Sklearn (any relatively recent version would work)
 - Lasagne 0.1.dev0
-- XGBoost 0.40
+- XGBoost 0.4.0
 - Theano 0.7.0.dev

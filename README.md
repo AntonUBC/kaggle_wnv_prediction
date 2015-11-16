@@ -78,7 +78,7 @@ Overall, this script can generate 4 types of output: baseline model with and wit
 ### Instruction
 
 - download train, test, and weather data from the [competition website](https://www.kaggle.com/c/predict-west-nile-virus/data) and put all the data
-into folder ```./data``` (you may need to adjusts its path according to your location using ```/kaggle_wnv_virus_prediction//wnv_utils/paths.py```). You must also create a folder ```./submission``` in the same subfolder. This folder
+into folder ```./data``` (you will need to specify the path to this directory using ```/kaggle_wnv_virus_prediction//wnv_utils/paths.py```). You must also create a folder ```./submission``` in the same subfolder. This folder
 will be used for saving predictions.
 
 - run ```/kaggle_wnv_virus_prediction/ensemble/ensemble_submission.py``` to generate the file of predictions in csv format. 

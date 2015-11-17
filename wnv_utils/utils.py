@@ -1,7 +1,6 @@
 # This script contains functions used for data loading, cleaning, merging, feature engineering,
 # and saving predictions
-# It also contains a stacking function, used to obtain meta-features (log(number of mosquitos))
-# for the 2d stage
+# It also contains a stacking function, used to obtain meta-features: predicted log(number of mosquitos) for the 2d stage
 # Finally, there is a bagging (bootstrap) function designed to stabilize predictions of the Neural Net
 # classifier
 

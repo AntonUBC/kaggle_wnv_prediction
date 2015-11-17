@@ -144,24 +144,24 @@ def LoadTrain(version): # Load and prepare train data
 
 # Note: This is a POST-DEADLINE improvement 
 # This procedure calculates the number of duplicated rows by ['Date', 'Species'], ['Date', 'Trap'], ['Date', 'Block'],
-# ['Year', 'Species'], and etc. This improves LB score by about 0.008
+# ['Year', 'Species'], and etc. This improves LB score by about 0.017-0.018
 def AddMoreFeatures(df, list_cols):
     indicator = np.not_equal(df.N_Dupl.values, np.ones(df.shape[0]))
     df['N'] = indicator
     grouped = df.groupby(by=list_cols, as_index=False)['N'].sum() 
     grouped.columns = [list_cols[0], list_cols[1], 'N_Dupl_%s_%s' %(list_cols[0], list_cols[1])]
     df.drop('N', axis=1, inplace=True)
-    result = df.merge(grouped, on=list_cols, how="left") #.reset_index()    
+    result = df.merge(grouped, on=list_cols, how="left")   
     return result 
 
-def save_submission(path_sample_submission, ids, predictions):
+def save_submission(ids, predictions):
     submission = pd.DataFrame({"Id": ids, "WnvPresent": predictions})
     submission.to_csv(path_sample_submission, index=False) 
 
 def StackModels(train, test, y, clfs, n): # train data (pd data frame), test data (pd date frame), Target data, List of clfs to stack, position of last non-scailed model in clfs. 
 
 # StackModels() performs Stacked Aggregation on data: it uses 9 different models to get out-of-fold 
-# predictions for log(number of mosquitos) for train data. It uses the whole train dataset to obtain 
+# predictions of log(number of mosquitos) for train data. It uses the whole train dataset to obtain 
 # predictions for test. This procedure adds 9 meta-features (predictions of 9 models) to both train and 
 # test data. Furthermore, since some models (e.g., SVR) require data to be scailed for better performance,
 # there is a parameter to be passed to StackModels() which determines the position of the LAST non-scailed

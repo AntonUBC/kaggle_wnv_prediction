@@ -33,13 +33,11 @@ from wrappers import models
 
 Data_Version = 1 # 2    Choose the data version (1,2)
 Submission_Version = 1 # 2  Choose the submission version (1,2)
-bagging = False # True  Bagging stabilizes Neural Net predictions which have high variance in general
+bagging = False # True  Bagging stabilizes Neural Net predictions which usually have high variance
 if bagging == True:
     number_samples = 250  # set number of bootstrap samples (set high number only if you have GPU, otherwise
                           # use 10 or 20 samples)
 
-path_sample_submission = paths.DATA_SUBMISSION_PATH
-      
 def PredictXGB(train, test, target):  # Get predictions of XGBoost classifier
     print("Training Gradient Boosting Classifier ")
     clf = models.XGBoostClassifier(nthread=6, eta=0.025, gamma=1.425, max_depth=11,
@@ -73,7 +71,7 @@ train.drop(['NumMosquitos', 'WnvPresent'], axis=1, inplace=True)
 ids=test.Id.values    # use ids to construct the submission file
 test.drop('Id', axis=1, inplace=True)
 
-# Initialize regression models for estimation of log(predicted number of mosquitos)
+# Initialize regression models for estimation of log(number of mosquitos)
 
 clf1 = models.XGBoostRegressor(booster='gbtree', nthread=6, eta=.025, gamma=1.9, max_depth=9, 
                  min_child_weight=6, max_delta_step=0, subsample=0.75, colsample_bytree=0.7, 
@@ -131,4 +129,4 @@ else:
    preds=(preds_nn**(0.6))*(preds_xgb**(0.4))
 
 #Save the submission file   
-utils.save_submission(path_sample_submission, ids, preds)
+utils.save_submission(ids, preds)

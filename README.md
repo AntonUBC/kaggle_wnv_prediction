@@ -49,7 +49,7 @@ layers and dropout for regularization.
 
 - predictions of second stage models were combined using a geometric mean
 
-I tuned hyper-parameters of 1st and 2d stage models using a very nice package called [hyperopt] (https://github.com/hyperopt/hyperopt) and splitting data by year for cross-validation.
+I tuned hyper-parameters of 1st and 2d stage models using a very nice python library [hyperopt] (https://github.com/hyperopt/hyperopt) and splitting data by year for cross-validation.
 
 Thanks to this competition, I discovered two great machine learning libraries: [XGBoost](https://github.com/dmlc/xgboost) and
 [Lasagne](https://github.com/Lasagne/Lasagne). The first one is an open source gradient boosting library written in C++ which supports parallelized tree building and has numerous regularization capabilities. In my experience, it outperforms sklearn
